@@ -1,0 +1,36 @@
+@mixin fontClasses($family, $weight) {
+  font-family: var(--font-#{$family}) !important;
+  font-weight: $weight !important;
+}
+
+@mixin leanerGradient($firstColor: var(--base-secondary--dark), $secondColor: var(--base-primary), $direction: to right) {
+  background-image: linear-gradient($direction, $firstColor 60%, $secondColor);
+}
+
+@mixin centerItems() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin scrollBar($width: var(--scroll-bar-width), $track: transparent, $thumb: var(--base-primary), $pointerEvent: initial) {
+  &::-webkit-scrollbar-track {
+    background: $track;
+    pointer-events: $pointerEvent;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+    background: transparent;
+    pointer-events: $pointerEvent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumb;
+    pointer-events: $pointerEvent;
+    border-radius: 10px;
+  }
+}
