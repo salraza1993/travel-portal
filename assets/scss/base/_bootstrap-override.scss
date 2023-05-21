@@ -257,3 +257,21 @@
     border-color: var(--base-secondary);
   }
 }
+
+.list-group {
+  &-item { transition: var(--base-transition); cursor: pointer;}
+  &-hover {
+    &--primary {
+      .list-group-item:hover {
+        background-color: rgba(var(--base-primary-rgb), 0.25);
+        color: var(--bs-black);
+      }
+    }
+    &--secondary {
+      .list-group-item:hover {
+        background-color: rgba(var(--base-secondary-rgb), 0.25);
+        color: var(--bs-black);
+      }
+    }
+  }
+}

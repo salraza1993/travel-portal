@@ -18,7 +18,9 @@ $media-screen--xxl: 1400px;
   --font-playfair: 'Playfair Display', serif;
   --font-size-small: 0.9rem;
   --base-primary: #F5C151;
+  --base-primary-rgb: 245, 193, 81;
   --base-secondary: #139BCB;
+  --base-secondary-rgb: 19, 155, 203;
   --base-secondary--dark: #107BA1;
   --base-footer-bg-color: #054C65;
   --base-max-z-index: 10;
@@ -31,7 +33,7 @@ $media-screen--xxl: 1400px;
   --scroll-bar-width: 6px;
   --remain-vw-width: 0;
   --max-width-vw: 93vw;
-  --home-slider-height: 60vh;
+  --home-slider-height: 550px;
 }
 
 @media (width <= $media-screen--mobile) {
