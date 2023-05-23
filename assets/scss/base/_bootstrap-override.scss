@@ -93,6 +93,7 @@
     height: calc(var(--top-strip-height) / 1.5);
     aspect-ratio: 1 / 1;
   }
+  &-inline, &--inline { max-width: max-content;}
   // &.shadow {
   //   box-shadow: 0 10px 20px -10px rgba(var(--bs-btn-shadow-color), .5) !important;
   //   &:hover {

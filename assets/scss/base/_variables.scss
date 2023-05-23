@@ -6,17 +6,23 @@
 // Extra extra large	xxl	≥1400px
 $media-screen--xs: 100%;
 $media-screen--sm: 576px;
+$media-screen--sm-container: 540px;
 $media-screen--mobile: 767px;
 $media-screen--md: 768px;
+$media-screen--md-container: 720px;
 $media-screen--lg: 992px;
+$media-screen--lg-container: 960px;
 $media-screen--xl: 1200px;
+$media-screen--xl-container: 1140px;
 $media-screen--xxl: 1400px;
+$media-screen--xxl-container: 1320px;
+
+
+// --remain-viewport-side-width: calc(100vw - #{$media-screen--md-container} + calc(var(--bs-gutter-x) * 1));
+
 
 :root {
   --base-bg-color: #F6F6F6;
-  --font-inter: 'Inter', sans-serif;
-  --font-playfair: 'Playfair Display', serif;
-  --font-size-small: 0.9rem;
   --base-primary: #F5C151;
   --base-primary-rgb: 245, 193, 81;
   --base-secondary: #139BCB;
@@ -27,13 +33,63 @@ $media-screen--xxl: 1400px;
   --base-transition: all 0.3s ease-in-out;
   --main-header-height: 110px;
   --top-strip-height: calc(var(--main-header-height) / 2.3);
-
+  
   --base-border-radius: 0.35rem;
   --base-transparent: transparent;
   --scroll-bar-width: 6px;
   --remain-vw-width: 0;
   --max-width-vw: 93vw;
   --home-slider-height: 550px;
+  --remain-viewport-side-width: 0;
+  
+  --font-size-small: 0.9rem;
+  --font-inter: 'Inter', sans-serif;
+  --font--inter: var(--font-inter);
+  --font-playfair: 'Playfair Display', serif;
+  --font--playfair: var(--font-playfair);
+  --fs--1: 2.5rem;
+  --fs--2: 2rem;
+  --fs--3: 1.75rem;
+  --fs--4: 1.5rem;
+  --fs--5: 1.25rem;
+  --fs--6: 1rem;
+  --font-size--1: var(--fs--1);
+  --font-size--2: var(--fs--2);
+  --font-size--4: var(--fs--4);
+  --font-size--5: var(--fs--5);
+  --font-size--6: var(--fs--6)}
+
+@mixin remainViewportSideWidth($containerSize) {
+  --remain-viewport-side-width: calc(100vw - #{$containerSize} + calc(var(--bs-gutter-x) * 1));
+}
+@media (width >= $media-screen--xl) and (width <= $media-screen--xxl) {
+  :root {
+    @include remainViewportSideWidth($media-screen--xxl-container);
+  }
+}
+
+@media (width >= $media-screen--lg) and (width <= $media-screen--xl) {
+  :root {
+    @include remainViewportSideWidth($media-screen--xl-container);
+  }
+}
+
+@media (width >= $media-screen--md) and (width <= $media-screen--lg) {
+  :root {
+    @include remainViewportSideWidth($media-screen--lg-container);
+  }
+}
+
+@media (width >= $media-screen--sm) and (width <= $media-screen--md) {
+  :root {
+    @include remainViewportSideWidth($media-screen--md-container);
+  }
+}
+
+@media (width < $media-screen--sm) {
+  :root {
+    @include remainViewportSideWidth($media-screen--sm-container);
+  }
 }
 
 @media (width <= $media-screen--mobile) {
