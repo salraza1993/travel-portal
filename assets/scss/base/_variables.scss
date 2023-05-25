@@ -59,42 +59,40 @@ $media-screen--xxl-container: 1320px;
   --font-size--5: var(--fs--5);
   --font-size--6: var(--fs--6)}
 
-@mixin remainViewportSideWidth($containerSize) {
-  --remain-viewport-side-width: calc(100vw - #{$containerSize} + calc(var(--bs-gutter-x) * 1));
-}
-@media (width >= $media-screen--xl) and (width <= $media-screen--xxl) {
-  :root {
-    @include remainViewportSideWidth($media-screen--xxl-container);
-  }
-}
 
-@media (width >= $media-screen--lg) and (width <= $media-screen--xl) {
-  :root {
-    @include remainViewportSideWidth($media-screen--xl-container);
-  }
-}
+// @media (width >= $media-screen--xl) and (width <= $media-screen--xxl) {
+//   :root {
+//     @include remainViewportSideWidth($media-screen--xxl-container);
+//   }
+// }
 
-@media (width >= $media-screen--md) and (width <= $media-screen--lg) {
-  :root {
-    @include remainViewportSideWidth($media-screen--lg-container);
-  }
-}
+// @media (width >= $media-screen--lg) and (width <= $media-screen--xl) {
+//   :root {
+//     @include remainViewportSideWidth($media-screen--xl-container);
+//   }
+// }
 
-@media (width >= $media-screen--sm) and (width <= $media-screen--md) {
-  :root {
-    @include remainViewportSideWidth($media-screen--md-container);
-  }
-}
+// @media (width >= $media-screen--md) and (width <= $media-screen--lg) {
+//   :root {
+//     @include remainViewportSideWidth($media-screen--lg-container);
+//   }
+// }
 
-@media (width < $media-screen--sm) {
-  :root {
-    @include remainViewportSideWidth($media-screen--sm-container);
-  }
-}
+// @media (width >= $media-screen--sm) and (width <= $media-screen--md) {
+//   :root {
+//     @include remainViewportSideWidth($media-screen--md-container);
+//   }
+// }
 
-@media (width <= $media-screen--mobile) {
-  :root {
-    --mobile-padding-x: 5vw;
-    --mobile-padding-y: 3.5vh;
-  }
-}
+// @media (width < $media-screen--sm) {
+//   :root {
+//     @include remainViewportSideWidth($media-screen--sm-container);
+//   }
+// }
+
+// @media (width <= $media-screen--mobile) {
+//   :root {
+//     --mobile-padding-x: 5vw;
+//     --mobile-padding-y: 3.5vh;
+//   }
+// }

@@ -701,12 +701,14 @@ img, svg, video { max-width: 100%; display: block; }
         --card-hover-color: var(--bs-white);
         --card-bg-hover-color: var(--bs-white);
         --card-border-radius: calc(var(--base-border-radius) * 1.5);
-
+        
         position: relative;
         display: grid;
         grid-template-columns: repeat(var(--card-grid-columns), 1fr);
         justify-content: center;
         gap: calc(1rem + .25vw);
+        margin-inline-start: calc(0px - calc(var(--remain-viewport-side-width) / 2));
+        padding-inline: calc(var(--remain-viewport-side-width) / 2);
         .browse-category-card {
           position: relative;
           display: flex;
@@ -752,18 +754,24 @@ img, svg, video { max-width: 100%; display: block; }
           }
         }
       }
-      @media (width <= $media-screen--lg) and (width >= $media-screen--md) {
+      @media (width <= $media-screen--lg) {
         &__container {
           --remain-viewport-side-width: calc(100vw - #{$media-screen--md-container} + calc(var(--bs-gutter-x) * 1));
           --card-min-height: auto;
+          --card-min-width: 250px;
           overflow-x: scroll;
-          margin-inline-start: calc(0px - calc(var(--remain-viewport-side-width) / 2));
-          padding-inline: calc(var(--remain-viewport-side-width) / 2);
+          // padding-inline: calc(var(--remain-viewport-side-width) / 2);
           justify-content: flex-start;
           width: 100vw;
         }
       }
-      @media (width <= $media-screen--mobile) {
+      @media (width < $media-screen--md) and (width >= $media-screen--sm) {
+        &__container {
+          --remain-viewport-side-width: calc(100vw - #{$media-screen--sm-container} + calc(var(--bs-gutter-x) * 1));
+          // margin-inline-start: calc(0px - calc(var(--remain-viewport-side-width) / 2));
+        }
+      }
+      @media (width <= $media-screen--sm) {
         .__heading { color: var(--bs-dark); }
         &__container {
           --card-min-height: auto;
@@ -777,6 +785,7 @@ img, svg, video { max-width: 100%; display: block; }
           margin-inline: calc(0px - calc(var(--bs-gutter-x) * 1) / 2);
         }
       }
+      
     }
   }
   @media (width < $media-screen--xxl) and (width > $media-screen--lg) {
@@ -884,7 +893,7 @@ img, svg, video { max-width: 100%; display: block; }
 
 .content-sec {
   position: relative;
-  padding-block: calc(2.5rem + 2vw);
+  padding-block: calc(2.5rem + 2vw) calc(1rem + 2vw);
   margin-block-start: calc(1rem + 1vw);
   &__container {
     position: relative;
@@ -914,6 +923,66 @@ img, svg, video { max-width: 100%; display: block; }
       @media (width <= $media-screen--mobile) {
         img { max-width: 100%; }
       }
+    }
+  }
+}
+
+.offer-sec {
+  position: relative;
+  overflow-y: initial;
+  &__container {
+    --block-border-radius: calc(var(--base-border-radius) * 1.5);
+    --block-icon-size: 200px;
+    position: relative;
+    padding-block: calc(2rem + 1.5vw);
+    isolation: isolate;
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0 -5% 0 25%;
+      background-color: rgba(var(--base-primary-rgb), 0.3);
+      background-image: url('./../images/pattern-dark.png');
+      border-radius: var(--block-border-radius);
+      z-index: -1;
+    }
+
+    &__card {
+      position: relative;
+      border-radius: var(--block-border-radius);
+      overflow: hidden;
+      @include cardShadow();
+      @include objectFit();
+    }
+    &__content {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: calc(1.5rem + 1vw);
+      &__icon {
+        min-width: var(--block-icon-size);
+        height: var(--block-icon-size);
+        @include centerItems();
+        @include objectFit($fit: contain, $maxWidth: 80%);
+      }
+    }
+    @media (width > $media-screen--lg) and (width < $media-screen--xl) {
+      --block-icon-size: 160px;
+    }
+    @media (width <= $media-screen--lg){
+      --block-icon-size: 140px;
+      &__card { margin-bottom: 2rem; }
+      &__content { padding-inline: 2vw; }
+      &::after {
+        inset: 30% -5% 0 -5%;
+      }
+    }
+    @media (width <= $media-screen--sm) {
+      &::after {
+        inset: 30% 0 0 0;
+      }     
+      &__card { max-width: 85%; margin-inline: auto;}
+      &__content { padding-inline: 5vw; }
+
     }
   }
 }
