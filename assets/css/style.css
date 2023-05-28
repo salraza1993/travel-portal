@@ -6,6 +6,7 @@
   --base-secondary-rgb: 19, 155, 203;
   --base-secondary--dark: #107BA1;
   --base-footer-bg-color: #054C65;
+  --base-border-color: #D5D5D5;
   --base-max-z-index: 10;
   --base-transition: all 0.3s ease-in-out;
   --main-header-height: 110px;
@@ -302,6 +303,7 @@
 }
 
 .btn {
+  --bs-btn-hover-border-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -326,6 +328,26 @@
 .btn-inline, .btn--inline {
   max-width: -moz-max-content;
   max-width: max-content;
+}
+.btn-hover--primary:hover {
+  --bs-btn-hover-color: var(--bs-dark);
+  --bs-btn-hover-bg: var(--base-primary);
+  --bs-btn-hover-border-color: transparent;
+}
+.btn-hover--secondary:hover {
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: var(--base-secondary);
+  --bs-btn-hover-border-color: transparent;
+}
+.btn-hover--light:hover {
+  --bs-btn-hover-color: var(--bs-dark);
+  --bs-btn-hover-bg: var(--bs-white);
+  --bs-btn-hover-border-color: transparent;
+}
+.btn-hover--dark:hover {
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: var(--bs-dark);
+  --bs-btn-hover-border-color: transparent;
 }
 .btn-primary {
   --bs-btn-color: var(--bs-dark);
@@ -1453,12 +1475,13 @@ img, svg, video {
   --block-icon-size: 200px;
   position: relative;
   padding-block: calc(2rem + 1.5vw);
+  margin-bottom: calc(2rem + 1vw);
   isolation: isolate;
 }
 .offer-sec__container::after {
   content: "";
   position: absolute;
-  inset: 0 -5% 0 25%;
+  inset: 0 -5% 0 20vw;
   background-color: rgba(var(--base-primary-rgb), 0.3);
   background-image: url("./../images/pattern-dark.png");
   border-radius: var(--block-border-radius);
@@ -1532,5 +1555,405 @@ img, svg, video {
   }
   .offer-sec__container__content {
     padding-inline: 5vw;
+  }
+}
+
+.top-deals-sec {
+  position: relative;
+  padding-block: calc(1.5rem + 1vw);
+}
+.top-deals-cards {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  padding-block: 0 calc(1.5rem + 1.5vw);
+}
+.top-deals-cards__container {
+  position: relative;
+}
+@media (width < 1200px) {
+  .top-deals-cards__container .container {
+    max-width: 100%;
+    padding-inline: 0;
+  }
+}
+.top-deals-cards__card {
+  --card-max-width: 275px;
+  --card-max-height: 370px;
+  --card-border-radius: calc(var(--base-border-radius) * 2);
+  --card-color: var(--bs-white);
+  --card-bg-color: var(--bs-dark-rgb);
+  --image-scale: 1;
+  position: relative;
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  width: 100%;
+  max-width: var(--card-max-width);
+  max-height: var(--card-max-height);
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  box-shadow: 0px 2.8px 2.2px rgba(0, 0, 0, 0.008), 0px 6.7px 5.3px rgba(0, 0, 0, 0.012), 0px 12.5px 10px rgba(0, 0, 0, 0.015), 0px 22.3px 17.9px rgba(0, 0, 0, 0.018), 0px 41.8px 33.4px rgba(0, 0, 0, 0.022), 0px 100px 80px rgba(0, 0, 0, 0.03);
+}
+.top-deals-cards__card__image {
+  position: relative;
+  overflow: hidden;
+  border-radius: inherit;
+}
+.top-deals-cards__card__image img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.top-deals-cards__card__image img {
+  scale: var(--image-scale);
+  transition: var(--base-transition);
+}
+.top-deals-cards__card__content {
+  position: absolute;
+  width: 90%;
+  bottom: 5%;
+  left: 50%;
+  background-color: rgba(var(--card-bg-color), 0.25);
+  color: var(--card-color);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  transform: translateX(-50%);
+  z-index: 1;
+  border-radius: calc(var(--card-border-radius) / 1.5);
+  text-align: center;
+  padding-block: 0.8rem;
+  padding-inline: 1rem;
+}
+.top-deals-cards__card__content p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.top-deals-cards__card__content p:last-child {
+  margin-bottom: 0;
+}
+.top-deals-cards__card:hover {
+  --image-scale: 1.15;
+}
+.top-deals-cards__card:hover .__heading {
+  color: var(--base-primary);
+}
+
+.top-deals-cards-slider {
+  --arrow-height: 35px;
+  position: relative;
+  padding-bottom: calc(var(--arrow-height) * 1.75);
+  isolation: isolate;
+}
+.top-deals-cards-slider::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  bottom: calc(var(--arrow-height) / 2);
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  height: 1px;
+  background-color: var(--base-border-color);
+  z-index: -1;
+}
+@media (width < 1200px) {
+  .top-deals-cards-slider::after {
+    max-width: 960px;
+  }
+}
+@media (width < 992px) {
+  .top-deals-cards-slider::after {
+    max-width: 720px;
+  }
+}
+@media (width < 768px) {
+  .top-deals-cards-slider::after {
+    max-width: 540px;
+  }
+}
+@media (width < 576px) {
+  .top-deals-cards-slider::after {
+    max-width: 90vw;
+  }
+}
+.top-deals-cards-slider__slide:not(:last-child) {
+  margin-right: 1rem;
+}
+.top-deals-cards-slider .slick-arrow {
+  position: absolute;
+  bottom: 0;
+  height: var(--arrow-height);
+  width: var(--arrow-height);
+  line-height: var(--arrow-height);
+  border-radius: var(--arrow-height);
+  text-align: center;
+  background-color: var(--bs-white);
+  color: var(--bs-dark);
+  transition: var(--base-transition);
+  border: 1px solid var(--base-border-color);
+}
+.top-deals-cards-slider .slick-arrow--right {
+  right: 0;
+}
+.top-deals-cards-slider .slick-arrow:hover {
+  background-color: var(--base-secondary);
+  color: var(--bs-white);
+  cursor: pointer;
+  border-color: var(--base-secondary);
+}
+@media (width < 1200px) {
+  .top-deals-cards-slider .slick-arrow--left {
+    left: 2%;
+  }
+  .top-deals-cards-slider .slick-arrow--right {
+    right: 2%;
+  }
+}
+@media (width < 992px) {
+  .top-deals-cards-slider .slick-arrow--left {
+    left: 6%;
+  }
+  .top-deals-cards-slider .slick-arrow--right {
+    right: 6%;
+  }
+}
+@media (width < 768px) {
+  .top-deals-cards-slider .slick-arrow--left {
+    left: 6%;
+  }
+  .top-deals-cards-slider .slick-arrow--right {
+    right: 6%;
+  }
+}
+@media (width < 576px) {
+  .top-deals-cards-slider .slick-arrow--left {
+    left: 6%;
+  }
+  .top-deals-cards-slider .slick-arrow--right {
+    right: 6%;
+  }
+}
+.top-deals-cards-slider .slick-dots {
+  --bullet-width: 10px;
+  position: absolute;
+  background-color: var(--bs-white);
+  bottom: calc(var(--arrow-height) / 4.5);
+  list-style: none;
+  margin: 0;
+  padding: calc(var(--bullet-width) / 2) 0.5rem;
+  border-radius: var(--bullet-width);
+  border: 1px solid var(--base-border-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: -moz-max-content;
+  width: max-content;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.top-deals-cards-slider .slick-dots button {
+  display: none;
+}
+.top-deals-cards-slider .slick-dots li {
+  width: var(--bullet-width);
+  height: var(--bullet-width);
+  border-radius: var(--bullet-width);
+  background-color: var(--bs-gray-500);
+  transition: var(--base-transition);
+}
+.top-deals-cards-slider .slick-dots li.slick-active {
+  background-color: var(--base-secondary);
+  scale: 1.3;
+}
+@media (width < 1200px) {
+  .top-deals-cards-slider .slick-list {
+    --remain-viewport-side-width: calc(100vw - 1140px + calc(var(--bs-gutter-x) * 1));
+    padding-inline: calc(var(--remain-viewport-side-width) / 2);
+  }
+}
+@media (width < 992px) {
+  .top-deals-cards-slider .slick-list {
+    --remain-viewport-side-width: calc(100vw - 960px + calc(var(--bs-gutter-x) * 1));
+    padding-inline: calc(var(--remain-viewport-side-width) / 2);
+  }
+}
+@media (width < 768px) {
+  .top-deals-cards-slider .slick-list {
+    --remain-viewport-side-width: calc(100vw - 720px + calc(var(--bs-gutter-x) * 1));
+    padding-inline: calc(var(--remain-viewport-side-width) / 2);
+  }
+}
+@media (width >= 576px) and (width < 768px) {
+  .top-deals-cards-slider .slick-list {
+    --remain-viewport-side-width: calc(100vw - 540px + calc(var(--bs-gutter-x) * 1));
+    padding-inline: calc(var(--remain-viewport-side-width) / 2);
+  }
+}
+@media (width < 576px) {
+  .top-deals-cards-slider .slick-list {
+    padding-inline: 3vw;
+  }
+}
+
+.section-heading {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.section-heading__content {
+  position: relative;
+}
+.section-heading__content .__heading {
+  font-family: var(--font--playfair);
+  font-weight: 700;
+  color: var(--base-secondary);
+  font-size: var(--fs--1);
+  -webkit-margin-after: calc(1rem + 0.5vw);
+          margin-block-end: calc(1rem + 0.5vw);
+}
+.section-heading__content p:last-child {
+  margin: 0;
+}
+.section-heading__content.--right {
+  max-width: 40%;
+  font-size: 0.9rem;
+}
+@media (width <= 992px) {
+  .section-heading {
+    flex-direction: column;
+  }
+  .section-heading__content.--right {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+.explore-adventure-sec {
+  position: relative;
+  padding-block: calc(1rem + 1.5vw);
+}
+.explore-adventure-sec .adventure-cards {
+  position: relative;
+}
+.explore-adventure-sec .adventure-cards__card {
+  --card-border-radius: calc(var(--base-border-radius) * 2);
+  --card-padding: calc(1.25rem + 0.75vw);
+  --card-max-height: 250px;
+  --card-icon-size: 45px;
+  --card-bg-color: var(--base-primary);
+  --card-color: var(--bs-dark);
+  --card-shadow-color: var(--base-primary-rgb);
+  --card-hover-bg-color: var(--base-secondary);
+  --card-hover-color: var(--ba-white);
+  --card-hover-shadow-color: var(--base-secondary-rgb);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  background-color: var(--bs-white);
+  display: flex;
+  isolation: isolate;
+}
+.explore-adventure-sec .adventure-cards__card.max-height {
+  max-height: var(--card-max-height);
+}
+.explore-adventure-sec .adventure-cards__card__image {
+  position: relative;
+  border-radius: inherit;
+  overflow: hidden;
+  width: 100%;
+}
+.explore-adventure-sec .adventure-cards__card__image img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.explore-adventure-sec .adventure-cards__card__image img {
+  transition: var(--base-transition);
+}
+.explore-adventure-sec .adventure-cards__card__content {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom, rgba(var(--bs-dark-rgb), 0) 0%, rgba(var(--bs-dark-rgb), 1) 100%);
+  color: var(--bs-white);
+  border-radius: inherit;
+  padding: var(--card-padding);
+  transition: var(--base-transition);
+}
+.explore-adventure-sec .adventure-cards__card__content .__heading {
+  font-family: var(--font--playfair);
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+}
+.explore-adventure-sec .adventure-cards__card__content .__heading a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--base-transition);
+}
+.explore-adventure-sec .adventure-cards__card__content .__heading::after {
+  content: "";
+  position: absolute;
+  bottom: 135%;
+  width: 100px;
+  background-color: var(--base-primary);
+  height: 2px;
+  border-radius: 50px;
+  left: 0;
+}
+.explore-adventure-sec .adventure-cards__card__content--cta {
+  width: var(--card-icon-size);
+  height: var(--card-icon-size);
+  border-radius: var(--card-icon-size);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: calc(var(--card-padding) / 1.5);
+  right: calc(var(--card-padding) / 1.5);
+  background-color: var(--card-bg-color);
+  color: var(--card-color);
+  box-shadow: 0 0 0 0.35rem rgba(var(--card-shadow-color), 0.15);
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--base-transition);
+}
+.explore-adventure-sec .adventure-cards__card__content--cta i {
+  rotate: -45deg;
+  scale: 1.25;
+}
+.explore-adventure-sec .adventure-cards__card__content--cta:hover {
+  scale: 1.25;
+  background-color: var(--card-hover-bg-color);
+  color: var(--card-hover-color);
+  box-shadow: 0 0 0 0.35rem rgba(var(--card-hover-shadow-color), 0.15);
+}
+.explore-adventure-sec .adventure-cards__card:hover .adventure-cards__card__image img {
+  scale: 1.25;
+}
+.explore-adventure-sec .adventure-cards__card:hover .adventure-cards__card__content .__heading {
+  color: var(--base-primary);
+}
+.explore-adventure-sec .adventure-cards__card:hover .adventure-cards__card__content--cta {
+  scale: 1.25;
+}
+@media (width > 768px) and (width < 992px) {
+  .explore-adventure-sec .adventure-cards__card {
+    --card-max-height: 150px;
   }
 }/*# sourceMappingURL=style.css.map */

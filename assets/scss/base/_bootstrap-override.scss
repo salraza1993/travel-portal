@@ -61,7 +61,7 @@
   // --bs-btn-border-color: transparent;
   // --bs-btn-after-bg-color: transparent;
   // --bs-btn-border-radius: calc(var(--bs-btn-padding-x) * 3);
-  // --bs-btn-hover-border-color: transparent;
+  --bs-btn-hover-border-color: transparent;
   // --bs-btn-shadow-color: transparent;
   // --bs-btn-shadow-hover-color: transparent;
   // --bs-btn-height: var(--common-btn-height);
@@ -111,37 +111,37 @@
   //   &.icon-small, &.small-icon { font-size: 100%; }
   // }
 
-  // &:hover {
-  //   &:after {
-  //     width: 100%;
-  //     height: 100%;
-  //     left: 0;
-  //     top: 0;
-  //   }
-  // }
-  // &-hover {
-  //   &--primary {
-  //     &:hover {
-  //       --bs-btn-hover-color: var(--bs-white);
-  //       --bs-btn-hover-bg: var(--bs-primary);
-  //       --bs-btn-hover-border-color: transparent;
-  //     }
-  //   }
-  //   &--light {
-  //     &:hover {
-  //       --bs-btn-hover-color: var(--bs-dark);
-  //       --bs-btn-hover-bg: var(--bs-white);
-  //       --bs-btn-hover-border-color: transparent;
-  //     }
-  //   }
-  //   &--dark {
-  //     &:hover {
-  //       --bs-btn-hover-color: var(--bs-white);
-  //       --bs-btn-hover-bg: var(--bs-dark);
-  //       --bs-btn-hover-border-color: transparent;
-  //     }
-  //   }
-  // }
+
+  &-hover {
+    &--primary {
+      &:hover {
+        --bs-btn-hover-color: var(--bs-dark);
+        --bs-btn-hover-bg: var(--base-primary);
+        --bs-btn-hover-border-color: transparent;
+      }
+    }
+    &--secondary {
+      &:hover {
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: var(--base-secondary);
+        --bs-btn-hover-border-color: transparent;
+      }
+    }
+    &--light {
+      &:hover {
+        --bs-btn-hover-color: var(--bs-dark);
+        --bs-btn-hover-bg: var(--bs-white);
+        --bs-btn-hover-border-color: transparent;
+      }
+    }
+    &--dark {
+      &:hover {
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: var(--bs-dark);
+        --bs-btn-hover-border-color: transparent;
+      }
+    }
+  }
 
   // &-sm {
   //   --bs-btn-padding-x: 0.9rem;

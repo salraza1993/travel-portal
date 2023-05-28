@@ -50,10 +50,21 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplaySpeed: 3500,
-    autoplay: false,
+    autoplay: true,
     arrows: true,
     prevArrow: $('.slider-arrows__button--left'),
     nextArrow: $('.slider-arrows__button--right'),
+  });
+
+  $('.top-deals-cards-slider').slick({
+    infinite: true,
+    variableWidth: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplaySpeed: 3500,
+    dots: true,
+    prevArrow: '<span class="slick-arrow--left"><i class="fa-solid fa-arrow-left"></i></span>',
+    nextArrow: '<span class="slick-arrow--right"><i class="fa-solid fa-arrow-right"></i></span>',
   });
 });
 
