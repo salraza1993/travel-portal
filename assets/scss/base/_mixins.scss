@@ -56,3 +56,9 @@
     0px 100px 80px rgba(0, 0, 0, 0.03);
 }
 
+@mixin multiline($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

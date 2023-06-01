@@ -17,10 +17,6 @@ $media-screen--xl-container: 1140px;
 $media-screen--xxl: 1400px;
 $media-screen--xxl-container: 1320px;
 
-
-// --remain-viewport-side-width: calc(100vw - #{$media-screen--md-container} + calc(var(--bs-gutter-x) * 1));
-
-
 :root {
   --base-bg-color: #F6F6F6;
   --base-primary: #F5C151;
@@ -39,9 +35,10 @@ $media-screen--xxl-container: 1320px;
   --base-transparent: transparent;
   --scroll-bar-width: 6px;
   --remain-vw-width: 0;
-  --max-width-vw: 93vw;
+  --max-width-vw: 90vw;
   --home-slider-height: 550px;
-  --remain-viewport-side-width: 0;
+  --remain-viewport-side-width: 100vw;
+  --bs-gutter-x: 1.5rem;
   
   --font-size-small: 0.9rem;
   --font-inter: 'Inter', sans-serif;
@@ -61,39 +58,32 @@ $media-screen--xxl-container: 1320px;
   --font-size--6: var(--fs--6)}
 
 
-// @media (width >= $media-screen--xl) and (width <= $media-screen--xxl) {
-//   :root {
-//     @include remainViewportSideWidth($media-screen--xxl-container);
-//   }
-// }
+@media (width < $media-screen--xl) {
+  :root {
+    --remain-viewport-side-width: calc(100vw - #{$media-screen--xl-container} + calc(calc(var(--bs-gutter-x) * 1) + var(--scroll-bar-width)));
+  }
+}
 
-// @media (width >= $media-screen--lg) and (width <= $media-screen--xl) {
-//   :root {
-//     @include remainViewportSideWidth($media-screen--xl-container);
-//   }
-// }
+@media (width < $media-screen--lg) {
+  :root {
+    --remain-viewport-side-width: calc(100vw - #{$media-screen--md-container} + calc(calc(var(--bs-gutter-x) * 1) + var(--scroll-bar-width)));
+  }
+}
 
-// @media (width >= $media-screen--md) and (width <= $media-screen--lg) {
-//   :root {
-//     @include remainViewportSideWidth($media-screen--lg-container);
-//   }
-// }
+@media (width < $media-screen--md) {
+  :root {
+    --remain-viewport-side-width: calc(100vw - #{$media-screen--md-container} + calc(calc(var(--bs-gutter-x) * 1) + var(--scroll-bar-width)));
+  }
+}
 
-// @media (width >= $media-screen--sm) and (width <= $media-screen--md) {
-//   :root {
-//     @include remainViewportSideWidth($media-screen--md-container);
-//   }
-// }
+@media (width >= $media-screen--sm) and (width < $media-screen--md) {
+  :root {
+    --remain-viewport-side-width: calc(100vw - #{$media-screen--sm-container} + calc(calc(var(--bs-gutter-x) * 1) + var(--scroll-bar-width)));
+  }
+}
 
-// @media (width < $media-screen--sm) {
-//   :root {
-//     @include remainViewportSideWidth($media-screen--sm-container);
-//   }
-// }
-
-// @media (width <= $media-screen--mobile) {
-//   :root {
-//     --mobile-padding-x: 5vw;
-//     --mobile-padding-y: 3.5vh;
-//   }
-// }
+@media (width < $media-screen--sm) {
+  :root {
+    --remain-viewport-side-width: 0;
+  }
+}
