@@ -66,6 +66,17 @@ $(document).ready(function () {
     prevArrow: '<span class="slick-arrow--left"><i class="fa-solid fa-arrow-left"></i></span>',
     nextArrow: '<span class="slick-arrow--right"><i class="fa-solid fa-arrow-right"></i></span>',
   });
+
+  $('.partners-logos-slider').slick({
+    infinite: true,
+    variableWidth: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplaySpeed: 3500,
+    dots: true,
+    prevArrow: '<span class="slick-arrow--left"><i class="fa-solid fa-arrow-left"></i></span>',
+    nextArrow: '<span class="slick-arrow--right"><i class="fa-solid fa-arrow-right"></i></span>',
+  });
 });
 
 const options = {

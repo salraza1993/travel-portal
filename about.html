@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ======== [ Fonts ] ======== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- ======== [ Font Awesome Icons ] ======== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- ======== [ Bootstrap ] ======== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
+  <!-- ======== [ Slick Slider ] ======== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <!-- Plugin CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/light.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/dark.min.css" rel="stylesheet">
+    <!-- Plugin JS -->
+  <!-- ======== [ Custom Styles ] ======== -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Travel | About</title>
+</head>
+<body>
+  <header class="main-header">
+    <div class="main-header__top-strip z-index--1">
+      <div class="container">
+        <div class="main-header__top-strip__sub">  
+          <div class="elements--left">
+            <p class="m-0 text-white">
+              Let's explore the world. &nbsp;
+              <strong class="text--primary">Get up to 20% OFF!</strong>
+            </p>
+          </div>
+          <div class="elements--right [ d-flex align-items-center gap-3 ]">
+            <div class="info-clickable-buttons gap-3">
+              <button type="button" class="info-clickable-buttons__button">
+                <i class="fa-regular fa-bell"></i>
+              </button>
+              <button type="button" class="info-clickable-buttons__button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="dropdown dropdown--modified hidden--mobile">
+              <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="country-flag-block">
+                  <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                </span> Australia
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-header__navbar">
+      <div class="container">
+        <div class="main-header__navbar__sub">
+          <div class="main-header__navbar__logo">
+            <a href="./">
+              <img src="./assets/images/company-logo.svg" alt="Company Logo" />
+            </a>
+          </div>
+          <nav class="main-header__navigation">
+            <div class="tab-hamburger-menu d-none"><i class="fa-solid fa-bars pe-none"></i></div>
+            <ul class="main-header__navigation__menu">
+              <li class="main-header__navigation__menu__item">
+                <a class="main-header__navigation__menu__item__link" href="./pacakges.html">Holiday Packages</a>
+              </li>
+              <li class="main-header__navigation__menu__item">
+                <a class="main-header__navigation__menu__item__link" href="./destinations.html">Destinations</a>
+              </li>
+              <li class="main-header__navigation__menu__item">
+                <a class="main-header__navigation__menu__item__link" href="./blog.html">Blog</a>
+              </li>
+              <li class="main-header__navigation__menu__item">
+                <a class="main-header__navigation__menu__item__link" href="./contact.html">Contact</a>
+              </li>
+              <li class="main-header__navigation__menu__item">
+                <a class="main-header__navigation__menu__item__link" href="./sepecial-offers.html">Special Offers</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="#" class="btn btn-outline-dark hidden--xs"><i class="fa-solid fa-user"></i> Login/Signup</a>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-menu d-none show--mobile">
+      <div class="mobile-menu__close"><i class="fa-solid fa-arrow-left"></i></div>
+      <div class="mobile-menu__body">
+        <div>
+          <div class="cta-buttons mb-4 flex-wrap d-flex gap-3">
+            <div class="dropdown dropdown--modified">
+              <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="country-flag-block">
+                  <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                </span> Australia
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-2">
+                    <span class="country-flag-block">
+                      <img src="./assets/images/australia-flag.jpg" alt="Australia Flag" />
+                    </span> 
+                    Australia
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="btn btn-light"><i class="fa-solid fa-user"></i> Login/Signup</a>
+          </div>
+          <ul class="mobile-menu__nav">
+            <li class="mobile-menu__nav__item">
+              <a class="mobile-menu__nav__item__link" href="#">Holiday Packages</a>
+            </li>
+            <li class="mobile-menu__nav__item">
+              <a class="mobile-menu__nav__item__link" href="#">Destinations</a>
+            </li>
+            <li class="mobile-menu__nav__item">
+              <a class="mobile-menu__nav__item__link" href="#">Blog</a>
+            </li>
+            <li class="mobile-menu__nav__item">
+              <a class="mobile-menu__nav__item__link" href="#">Contact</a>
+            </li>
+            <li class="mobile-menu__nav__item">
+              <a class="mobile-menu__nav__item__link" href="#">Special Offers</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mobile-menu__footer">
+          <div class="social-media-container">
+            <h6 class="text--primary text-uppercase mb-3">Stay Connected</h6>
+            <ul class="social-media-list">
+              <li><a class="social-media-list__link" href="javascript:;"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a class="social-media-list__link" href="javascript:;"><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a class="social-media-list__link" href="javascript:;"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a class="social-media-list__link" href="javascript:;"><i class="fa-brands fa-youtube"></i></a></li>
+              <li><a class="social-media-list__link" href="javascript:;"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="content-sec">
+    <div class="container">
+      <div class="content-sec__container">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-xl-6">
+            <div class="content-sec__container__content">
+              <small class="heading-top-strip">
+                <i class="fa-solid fa-map-pin"></i>
+                Welcome to Travel
+              </small>
+              <h2 class="__heading">We are most funning company about travel and adventure</h2>
+              <p class="__text">
+                Sit amet consectetur velit integer tincidunt sceleries nodalesry volutpat neque fermentum malesuada sceleris quecy massa lacus ultrices eget leo cras odio blandit rhoncus eues feugiat. Sit amet consectetur velit integer tincidunt sceleries nodalesry volutpat neque fermentum malesuada sceleris quecy massa lacus ultrices eget leo cras odio blandit rhoncus eues feugiat.
+              </p>
+              <a href="javascript:;" class="btn btn-outline-dark btn-inline">
+                Know More 
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6">
+            <div class="content-sec__container__image">
+              <img src="./assets/images/home-about-image.png" alt="Home About Image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="recommended-sec">
+    <div class="recommended-sec__header-bg" style="background-image: url('./assets/images/recommended-banner.jpg');"></div>
+    <div class="container">
+      <div class="recommended-sec__container">
+        <div class="section-heading mb-4 __light">
+          <div class="section-heading__content --left">
+            <small class="heading-top-strip">
+              <img src="./assets/images/explore-icon.svg" alt="Explore Icon" />
+              You must explore...
+            </small>
+            <h2 class="__heading">Explore Real Adventure</h2>
+          </div>
+          <div class="section-heading__content --right">
+            <p>
+              Sit amet consectetur velit integer tincidunt sceleries nodalesry volutpat neque fermentum malesuada sceleris quecy massa lacus ultrices eget leo cras odio blandit rhoncus eues feugiat.
+            </p>
+          </div>
+        </div>
+        <div class="recommended-sec__container__content">
+          <div class="row g-4 tablet-horizontal-scroll">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="content-card">
+                <div class="content-card__thumbnail">
+                  <img src="./assets/images/card-image-bg.jpg" alt="Card Image" />
+                </div>
+                <div class="content-card__content">
+                  <h4 class="__heading"><a href="javascript:;">Deals of the week</a></h4>
+                  <p class="__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur id quasi explicabo quaerat iste dicta facilis rem, natus beatae laboriosam itaque amet corrupti consequuntur ut esse libero...</p>
+                  <a href="javascript::" class="content-card__content__button">
+                    Read More 
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="content-card">
+                <div class="content-card__thumbnail">
+                  <img src="./assets/images/card-image-bg.jpg" alt="Card Image" />
+                </div>
+                <div class="content-card__content">
+                  <h4 class="__heading"><a href="javascript:;">Deals of the week</a></h4>
+                  <p class="__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur id quasi explicabo quaerat iste dicta facilis rem, natus beatae laboriosam itaque amet corrupti consequuntur ut esse libero...</p>
+                  <a href="javascript::" class="content-card__content__button">
+                    Read More 
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="content-card md__horizontal">
+                <div class="content-card__thumbnail">
+                  <img src="./assets/images/card-image-bg.jpg" alt="Card Image" />
+                </div>
+                <div class="content-card__content">
+                  <h4 class="__heading"><a href="javascript:;">Deals of the week</a></h4>
+                  <p class="__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur id quasi explicabo quaerat iste dicta facilis rem, natus beatae laboriosam itaque amet corrupti consequuntur ut esse libero...</p>
+                  <a href="javascript::" class="content-card__content__button">
+                    Read More 
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="content-card __horizontal">
+                <div class="content-card__thumbnail">
+                  <img src="./assets/images/card-image-bg.jpg" alt="Card Image" />
+                </div>
+                <div class="content-card__content">
+                  <h4 class="__heading"><a href="javascript:;">Deals of the week</a></h4>
+                  <p class="__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur id quasi explicabo quaerat iste dicta facilis rem, natus beatae laboriosam itaque amet corrupti consequuntur ut esse libero...</p>
+                  <a href="javascript::" class="content-card__content__button">
+                    Read More 
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="content-card __horizontal">
+                <div class="content-card__thumbnail">
+                  <img src="./assets/images/card-image-bg.jpg" alt="Card Image" />
+                </div>
+                <div class="content-card__content">
+                  <h4 class="__heading"><a href="javascript:;">Deals of the week</a></h4>
+                  <p class="__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur id quasi explicabo quaerat iste dicta facilis rem, natus beatae laboriosam itaque amet corrupti consequuntur ut esse libero...</p>
+                  <a href="javascript::" class="content-card__content__button">
+                    Read More 
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-sec">
+    <div class="newsletter-sec__container" style="background-image: url('./assets/images/newsletter-bg.jpg');">
+      <div class="container p-0">
+        <div class="newsletter-sec__container__content">
+          <div class="subscribe-container">
+            <h2 class="text-primary my-2 font-playfair--700 fs-1">Newsletter</h2>
+            <p>Subscribe our newsletter to get <span class="text-primary">Our Latest Updates &amp; News</span></p>
+            <div class="subscribe-container__form">
+              <div class="subscribe-container__form__input-block">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <button class="btn btn-primary">
+                  <i class="fa-solid fa-envelope"></i>
+                  Subscribe
+                </button>
+              </div>
+              <div class="subscribe-container__form__check form-check">
+                <input class="form-check-input form-check-input--primary" type="checkbox" value="" id="flexCheckDefault" checked="">
+                <label class="form-check-label font-size--small" for="flexCheckDefault">
+                  I agree to all <a href="#" class="text-white text-hover--primary">Terms &amp; Conditions</a> &amp; <a href="#" class="text-white text-hover--primary">Policies</a>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-blog-sec">
+    <div class="container">
+      <div class="home-blog-sec__container">
+        <div class="section-heading mb-4">
+          <div class="section-heading__content --left">
+            <small class="heading-top-strip">
+              <img src="./assets/images/explore-icon.svg" alt="Explore Icon" />
+              Recent news feed
+            </small>
+            <h2 class="__heading">Latest News and Articles from the blog</h2>
+          </div>
+          <div class="section-heading__content --right">
+            <a href="javascript:;" class="btn btn-light shadow btn-hover--secondary btn-lg">
+              View More
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-xl-8 d-flex">
+            <div class="row g-4">
+              <div class="col-12 col-lg-6">
+                <div class="blog-card">
+                  <div class="blog-card__image">
+                    <a href="javascript:;" class="blog-card__image__thumbnail">
+                      <img src="./assets/images/blog-image.jpg" alt="Blog Image" />
+                    </a>
+                    <ul class="blog-card__tags">
+                      <li class="blog-card__tags__item"><a href="javascript:;">Adventure</a></li>
+                    </ul>
+                  </div>
+                  <div class="blog-card__content">
+                    <h3 class="__heading"><a href="javascript:;">Things to see and do when visiting Japan</a></h3>
+                    <div class="blog-card__content__footer __bordered">
+                      <ul class="blog-card__short-info">
+                        <li class="blog-card__short-info__item">
+                          <a href="javascript:;"><i class="fa-solid fa-user"></i> Admin</a>
+                        </li>
+                        <li class="blog-card__short-info__item">
+                          <a href="javascript:;"><i class="fa-solid fa-comments"></i> 10 Comments</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="blog-card">
+                  <div class="blog-card__image">
+                    <a href="javascript:;" class="blog-card__image__thumbnail">
+                      <img src="./assets/images/blog-image.jpg" alt="Blog Image" />
+                    </a>
+                    <ul class="blog-card__tags">
+                      <li class="blog-card__tags__item"><a href="javascript:;">Adventure</a></li>
+                    </ul>
+                  </div>
+                  <div class="blog-card__content">
+                    <h3 class="__heading"><a href="javascript:;">Things to see and do when visiting Japan</a></h3>
+                    <div class="blog-card__content__footer __bordered">
+                      <ul class="blog-card__short-info">
+                        <li class="blog-card__short-info__item">
+                          <a href="javascript:;"><i class="fa-solid fa-user"></i> Admin</a>
+                        </li>
+                        <li class="blog-card__short-info__item">
+                          <a href="javascript:;"><i class="fa-solid fa-comments"></i> 10 Comments</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-4 d-flex">
+            <div class="blog-short-card">
+              <div class="blog-short-card__content">
+                <h4 class="__heading"><a href="javascript:;">Journeys are best measured with friends</a></h4>
+                <div class="blog-card__content__footer">
+                  <ul class="blog-card__short-info">
+                    <li class="blog-card__short-info__item">
+                      <a href="javascript:;"><i class="fa-solid fa-user"></i> Admin</a>
+                    </li>
+                    <li class="blog-card__short-info__item">
+                      <a href="javascript:;"><i class="fa-solid fa-comments"></i> 10 Comments</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="blog-short-card__content">
+                <h4 class="__heading"><a href="javascript:;">Journeys are best measured with friends</a></h4>
+                <div class="blog-card__content__footer">
+                  <ul class="blog-card__short-info">
+                    <li class="blog-card__short-info__item">
+                      <a href="javascript:;"><i class="fa-solid fa-user"></i> Admin</a>
+                    </li>
+                    <li class="blog-card__short-info__item">
+                      <a href="javascript:;"><i class="fa-solid fa-comments"></i> 10 Comments</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="blog-short-card__content">
+                <h4 class="__heading"><a href="javascript:;">Journeys are best measured with friends</a></h4>
+                <div class="blog-card__content__footer">
+                  <ul class="blog-card__short-info">
+                    <li class="blog-card__short-info__item">
+                      <a href="javascript:;"><i class="fa-solid fa-user"></i> Admin</a>
+                    </li>
+                    <li class="blog-card__short-info__item">
+                      <a href="javascript:;"><i class="fa-solid fa-comments"></i> 10 Comments</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-5" />
+    </div>
+  </section>
+
+  <section class="partners-sec">
+    <div class="container">
+      <div class="partenrs-sec__container">
+        <div class="section-heading mb-4">
+          <div class="section-heading__content --left">
+            <small class="heading-top-strip">
+              <img src="./assets/images/explore-icon.svg" alt="Explore Icon" />
+              We proud to be listed with...
+            </small>
+            <h2 class="__heading">Our Travel Partners</h2>
+          </div>
+        </div>
+        <div class="partners-logos__container partners-logos-slider">
+          <div class="partners-logos-slider__slide">
+            <div class="client-logo-container">
+              <div class="client-logo">
+                <img src="./assets/images/agoda-logo.jpg" alt="Agoda Logo" />
+              </div>
+              <div class="client-logo">
+                <img src="./assets/images/agoda-logo.jpg" alt="Agoda Logo" />
+              </div>
+            </div>
+          </div>
+          <div class="partners-logos-slider__slide">
+            <div class="client-logo-container">
+              <div class="client-logo">
+                <img src="./assets/images/agoda-logo.jpg" alt="Agoda Logo" />
+              </div>
+              <div class="client-logo">
+                <img src="./assets/images/agoda-logo.jpg" alt="Agoda Logo" />
+              </div>
+            </div>
+          </div>
+          <div class="partners-logos-slider__slide">
+            <div class="client-logo-container">
+              <div class="client-logo">
+                <img src="./assets/images/agoda-logo.jpg" alt="Agoda Logo" />
+              </div>
+              <div class="client-logo">
+                <img src="./assets/images/agoda-logo.jpg" alt="Agoda Logo" />
+              </div>
+            </div>
+          </div>
+          <div class="partners-logos-slider__slide">
+            <div class="client-logo-container">
+              <div class="client-logo">
+                <img src="./assets/images/agoda-logo.jpg" alt="Agoda Logo" />
+              </div>
+              <div class="client-logo">
+                <img src="./assets/images/agoda-logo.jpg" alt="Agoda Logo" />
+              </div>
+            </div>
+          </div>
+          <div class="partners-logos-slider__slide">
+            <div class="client-logo-container">
+              <div class="client-logo">
+                <img src="./assets/images/agoda-logo.jpg" alt="Agoda Logo" />
+              </div>
+              <div class="client-logo">
+                <img src="./assets/images/agoda-logo.jpg" alt="Agoda Logo" />
+              </div>
+            </div>
+          </div>
+          <div class="partners-logos-slider__slide">
+            <div class="client-logo-container">
+              <div class="client-logo">
+                <img src="./assets/images/agoda-logo.jpg" alt="Agoda Logo" />
+              </div>
+              <div class="client-logo">
+                <img src="./assets/images/agoda-logo.jpg" alt="Agoda Logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6 col-xl-4">
+          <div class="main-footer__content">
+            <div class="main-footer__content__logo mb-4">
+              <img src="./assets/images/company-logo.svg" alt="Company Logo" />
+            </div>
+            <div class="main-footer__content__text font-size--small">
+              <p class="pb-2 pe-lg-5">
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, cons, adipisci velit, sed quia non numquam eius modi ullma tempora incidunt ut labore et dolore magnam aliquam quaerat fruitr voluptatem. quis nostrum exetationem.reiciendis.
+              </p>
+            </div>
+            <div class="social-media-container mt-4 align-items-start">
+              <h6 class="text--primary mb-3">Stay Connected</h6>
+              <ul class="social-media-list gap-2">
+                <li>
+                  <a class="social-media-list__link" href="javascript:;" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="social-media-list__link" href="javascript:;" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="social-media-list__link" href="javascript:;" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="social-media-list__link" href="javascript:;" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="social-media-list__link" href="javascript:;" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <div class="main-footer__content">
+            <h5 class="text-primary my-4 fw-bold">Quick Links</h5>
+            <ul class="main-footer__content__links">
+             <li class="main-footer__content__links__item"><a href="./">Home</a></li>
+             <li class="main-footer__content__links__item"><a href="./about.html">About Us</a></li>
+             <li class="main-footer__content__links__item"><a href="./special-offers.html">Special Offers</a></li>
+             <li class="main-footer__content__links__item"><a href="./packages.html">Tour Packages</a></li>
+             <li class="main-footer__content__links__item"><a href="./destitions.html">Destinations</a></li>
+             <li class="main-footer__content__links__item"><a href="./blog.html">Blog</a></li>
+             <li class="main-footer__content__links__item"><a href="./media.html">Media</a></li>
+             <li class="main-footer__content__links__item"><a href="./faqs.html">FAQs</a></li>
+             <li class="main-footer__content__links__item"><a href="./testimonials.html">Testimonials</a></li>
+             <li class="main-footer__content__links__item"><a href="./partners-with-us.html">Partner with Us</a></li>
+             <li class="main-footer__content__links__item"><a href="./contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-12 mt-lg-4 mt-md-3 mt-4 mt-xl-0 col-xl-4">
+          <div class="row">
+            <div class="col-12 col-lg-6 col-xl-12">
+              <div class="main-footer__content">
+                <h5 class="text-primary my-4 fw-bold">Download Our Mobile Apps</h5>
+                <div class="main-footer__content__app-icon">
+                  <a href="#"><img src="./assets/images/gogole-play-store.png" alt="Google Play Store"></a>
+                  <a href="#"><img src="./assets/images/app-store.png" alt="App Store"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-12">
+              <hr class="my-4 d-xl-block" />
+              <div class="main-footer__content">
+                <div class="subscribe-container">
+                  <h5 class="text-primary my-2 fw-bold">Newsletter</h5>
+                  <p class="font-size--small">Subscribe our newsletter to get our latest updates & News</p>
+                  <div class="subscribe-container__form">
+                    <div class="subscribe-container__form__input-block">
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                      <button class="btn btn-primary">
+                        <i class="fa-solid fa-envelope"></i>
+                        Subscribe
+                      </button>
+                    </div>
+                    <div class="subscribe-container__form__check form-check">
+                      <input class="form-check-input form-check-input--primary" type="checkbox" value="" id="flexCheckDefault" checked>
+                      <label class="form-check-label font-size--small opacity-75" for="flexCheckDefault">
+                        I agree to all <a href="./terms-and-conditions.html" class="text-white text-hover--primary">Terms & Conditions</a> and <a href="./policies.html" class="text-white text-hover--primary">Policies</a>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyrights">
+        <div class="copyrights__links">
+          <p class="m-0">Copyright © Portal name. All Rights Reserved</p>
+          <span class="opacity-50">&nbsp;|&nbsp;</span>
+          <a href="#">Privacy Policy</a>
+          <span class="opacity-50">&nbsp;|&nbsp;</span>
+          <a href="#">Terms & Conditions</a>
+        </div>
+        <div class="payment-methods">
+          <img src="./assets/images/payment-methods.svg" alt="Payment Method Icons" />
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="./assets/js/slick.min.js"></script>
+   <!-- <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.js" defer></script> -->
+  <script type="text/javascript"src="./assets/js/custom.js"></script>
+</body>
+</html>
