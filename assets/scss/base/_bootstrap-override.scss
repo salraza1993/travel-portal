@@ -88,6 +88,7 @@
   white-space: nowrap;
   transition: var(--base-transition);
   flex-shrink: 0;
+  text-shadow: none;
   
   &-square {
     height: calc(var(--top-strip-height) / 1.5);

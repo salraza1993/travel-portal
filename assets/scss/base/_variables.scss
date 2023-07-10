@@ -20,9 +20,14 @@ $media-screen--xxl-container: 1320px;
 :root {
   --base-bg-color: #F6F6F6;
   --base-primary: #F5C151;
+  --bs-primary: #F5C151;
   --base-primary-rgb: 245, 193, 81;
+  --bs-primary-rgb: 245, 193, 81;
+
   --base-secondary: #139BCB;
+  --bs-secondary: #139BCB;
   --base-secondary-rgb: 19, 155, 203;
+  --bs-secondary-rgb: 19, 155, 203;
   --base-secondary--dark: #107BA1;
   --base-footer-bg-color: #054C65;
   --base-border-color: #D5D5D5;
@@ -56,8 +61,8 @@ $media-screen--xxl-container: 1320px;
   --font-size--2: var(--fs--2);
   --font-size--4: var(--fs--4);
   --font-size--5: var(--fs--5);
-  --font-size--6: var(--fs--6)}
-
+  --font-size--6: var(--fs--6);
+}
 
 @media (width < $media-screen--xl) {
   :root {

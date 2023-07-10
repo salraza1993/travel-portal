@@ -14,11 +14,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
   <!-- ======== [ Slick Slider ] ======== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-  <!-- Plugin CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/light.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/dark.min.css" rel="stylesheet">
-    <!-- Plugin JS -->
   <!-- ======== [ Custom Styles ] ======== -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Travel | Home</title>
@@ -374,7 +369,8 @@
                 Travel Date
               </div>
               <div class="search-input-block__value">
-                <span class="__text">DD/MM/YYYY</span>
+                <input type="text" id="departure" class="form-control __input" placeholder="DD/MM/YYYY" />
+                <!-- <span class="__text">DD/MM/YYYY</span> -->
                 <span class="__icon"><i class="fa-solid fa-angle-down"></i></span>
               </div>
             </div>
@@ -417,9 +413,6 @@
                 Search
               </button>
             </div>
-            <!-- https://vanilla-calendar.com/docs/reference/main/main-settings -->
-            <!-- https://vanilla-calendar.com/docs/learn/types-of-calendars/multiple -->
-            <!-- <div id="calendar"></div> -->
           </div>
         </div>
         <div class="browse-category-sec">
@@ -831,7 +824,7 @@
           </div>
         </div>
         <div class="recommended-sec__container__content">
-          <div class="row g-4 tablet-horizontal-scroll">
+          <div class="row g-lg-4 tablet-horizontal-scroll">
             <div class="col-12 col-md-6 col-lg-4">
               <div class="content-card">
                 <div class="content-card__thumbnail">
@@ -955,7 +948,7 @@
         </div>
       </div>
       <div class="packages-sec__container">
-        <div class="row g-4 tablet-horizontal-scroll">
+        <div class="row g-lg-4 tablet-horizontal-scroll">
           <div class="col-12 col-lg-4 col-xxl-3">
             <div class="package-card">
               <div class="package-card__image">
@@ -1201,8 +1194,8 @@
             </a>
           </div>
         </div>
-        <div class="popular-destination-cards">
-          <div class="row g-4 tablet-horizontal-scroll">
+        <div class="popular-destination-cards position-relative">
+          <div class="row g-lg-4 tablet-horizontal-scroll">
             <div class="col-12 col-lg-4 col-xl-3">
               <div class="popular-destination-card">
                 <div class="popular-destination-card__image">
@@ -1710,7 +1703,8 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="./assets/js/slick.min.js"></script>
-   <!-- <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.js" defer></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/plugins/mobilefriendly.js"></script>
   <script type="text/javascript"src="./assets/js/custom.js"></script>
 </body>
 </html>

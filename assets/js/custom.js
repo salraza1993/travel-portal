@@ -79,15 +79,8 @@ $(document).ready(function () {
   });
 });
 
-const options = {
-  type: 'multiple',
-};
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   const calendar = new VanillaCalendar('#calendar', options);
-//   calendar.init();
-// });
-
+// ============ [ Dropdowns Begins ] ============ //
+const dropdownBlockButton = document.querySelectorAll('.dropdown-block__button');
 function closeAllDropdownBlocks() {
   const dropdownBlocks = document.querySelectorAll('.dropdown-block');
   dropdownBlocks.forEach(item => {
@@ -95,8 +88,8 @@ function closeAllDropdownBlocks() {
     item.classList.remove('active');
   });
 }
-
 function openThisDropdownBlock(event) {
+  let this_item = event.target;
   let this_parent = event.target.closest('.dropdown-block');
   let dropdownListContainer = this_parent.querySelector('.dropdown-block__data');
   if (dropdownListContainer.classList.contains('opened')) {
@@ -111,16 +104,66 @@ function openThisDropdownBlock(event) {
     this_parent.classList.remove('active');
   });
 }
-
-const dropdownBlockButton = document.querySelectorAll('.dropdown-block__button');
 dropdownBlockButton.forEach(button => {
   button.addEventListener('click', function (elem) {
-    elem.stopPropagation();
+    let this_item_parent = elem.target.closest('.dropdown-block');
+    if (!this_item_parent.classList.contains('active')) elem.stopPropagation();
     closeAllDropdownBlocks();
-    openThisDropdownBlock(elem)    
+    openThisDropdownBlock(elem);
   });
 });
+// disabling all dropdowns
+document.addEventListener('click', () => closeAllDropdownBlocks(), false);
+// ============ [ Dropdowns End ] ============ //
 
-document.addEventListener('click', () => {
-  closeAllDropdownBlocks();
+// Accordion
+const accordionContainer = document?.querySelector('.accordion-container');
+const accordionBlocks = accordionContainer?.querySelectorAll('.accrodion-block');
+const accordionHeaders = accordionContainer?.querySelectorAll('.accrodion-block__header');
+const elem_checkbox = document?.querySelector('.checkbox');
+accordionBlocks?.forEach(item => {
+  item.addEventListener('click', (event) => {
+    let thisItemParent = event.target.parentNode;
+    if (thisItemParent.classList.contains('is-opened')) {
+      thisItemParent.classList.remove('is-opened');
+      accordionBlocks.forEach(block => block.classList.remove('is-opened'));
+      return;
+    }
+    accordionBlocks.forEach(block => block.classList.remove('is-opened'));
+    thisItemParent.classList.add('is-opened');
+  });
 })
+
+const packageDetailsTabContainer = document?.querySelector('#package-details-tab');
+const packageTabs = packageDetailsTabContainer?.querySelectorAll('.tab-list .tab-list__item');
+const packageTabData = packageDetailsTabContainer?.querySelectorAll('.tab-data');
+
+packageTabs.forEach(tab => {
+  tab.addEventListener('click', e => {
+    e.preventDefault();
+    packageTabs.forEach(tabItem => tabItem.classList.remove('active'));
+    packageTabData.forEach(tabItem => tabItem.classList.remove('selected'));
+    let this_item_id = e.target.id
+    let tab_data = packageDetailsTabContainer?.querySelector(`${this_item_id}-data`);
+    e.target.classList.add('active');
+    console.log(this_item_id)    
+    console.log(tab_data)    
+    
+
+  });
+})
+
+// document?.addEventListener('DOMContentLoaded', function () {
+//   const departure = new Litepicker({
+//     element: document.getElementById('departure'),
+//     numberOfColumns: 2,
+//     numberOfMonths: 2,
+//     plugins: ['mobilefriendly']
+//   });
+//   const packageDeparture = new Litepicker({
+//     element: document.getElementById('packageDeparture'),
+//     numberOfColumns: 2,
+//     numberOfMonths: 2,
+//     plugins: ['mobilefriendly']
+//   });
+// });

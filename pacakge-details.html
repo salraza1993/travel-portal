@@ -14,9 +14,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
   <!-- ======== [ Slick Slider ] ======== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <!-- Plugin CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/light.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/dark.min.css" rel="stylesheet">
+    <!-- Plugin JS -->
   <!-- ======== [ Custom Styles ] ======== -->
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Travel | Destinations</title>
+  <title>Travel | Packages</title>
 </head>
 <body>
   <header class="main-header">
@@ -261,414 +266,130 @@
     </div>
   </header>
 
-  <section class="hero-banner-sec" style="background-image: url('./assets/images/hero-banner.jpg');">
+  <section class="package-details-sec">
     <div class="container">
-      <div class="hero-banner-sec__container">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Destinations</li>
-          </ol>
-        </nav>
+      <div class="package-details-sec__container">
+        <div class="__banner">
+          <img src="./assets/images/package-details-banner.jpg" alt="Package Details Banner" />
+          <div class="__title">Explore South Africa</div>
+        </div>
+        <div class="__header"></div>
         <div class="__content">
-          <h2 class="__heading font-playfair--700">Destinations</h2>
+          <div class="__content__header">
+            <div class="block__left">
+              <h3 class="fw-light">Price from: <strong class="fw-bold">AED 3500</strong> per person</h3>
+            </div>
+            <div class="block__right d-flex align-items-center flex-wrap gap-3">
+              <ul class="sharable">
+                <li><i class="fa-solid fa-share-alt"></i></li>
+                <li><i class="fa-regular fa-heart"></i></li>
+              </ul>
+            </div>
+          </div>
+          <hr />
+          <ul class="package-duration">
+            <li><i class="fa-solid fa-sun"></i> 04 Days</li>
+            <li><i class="fa-solid fa-moon"></i> 03 Nights</li>
+          </ul>
+          <div class="__content__text">
+            <h4 class="my-3">About this Package</h4>
+            <p>
+              Sit amet consectetur velit integer tincidunt sceleries nodalesry volutpat neque fermentum malesuada sceleris quecy massa lacus ultrices eget leo cras odio blandit rhoncus eues feugiat. Sit amet consectetur velit integer tincidunt sceleries nodalesry volutpat neque fermentum malesuada sceleris quecy massa lacus ultrices eget leo cras odio blandit rhoncus eues feugiat. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, dolores odit! Corrupti officiis eos fuga quasi molestias nihil et aperiam exercitationem accusantium officia, animi, eius sint earum maxime, facere error!
+            </p>
+            <h4 class="mt-4 mb-3">This package includes:</h4>
+            <ul class="package-includes">
+              <li class="package-includes__item">
+                <span class="__icon"><img src="./assets/images/icon-flight.png" alt="Icon" /></span>
+                Flights
+              </li>
+              <li class="package-includes__item">
+                <span class="__icon"><img src="./assets/images/icon-hotel.png" alt="Icon" /></span>
+                Hotel
+              </li>
+              <li class="package-includes__item">
+                <span class="__icon"><img src="./assets/images/icon-car.png" alt="Icon" /></span>
+                Transport
+              </li>
+              <li class="package-includes__item">
+                <span class="__icon"><img src="./assets/images/icon-tour.png" alt="Icon" /></span>
+                Tours
+              </li>
+              <li class="package-includes__item">
+                <span class="__icon"><img src="./assets/images/icon-breakfast.png" alt="Icon" /></span>
+                Breakfast
+              </li>
+              <li class="package-includes__item">
+                <span class="__icon"><img src="./assets/images/icon-activities.png" alt="Icon" /></span>
+                Activities
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="popular-destination-sec pt-5">
-    <div class="container">
-      <div class="popular-destination-sec__container">
-        <div class="section-heading mb-2">
-          <div class="section-heading__content --left">
-            <h2 class="__heading">Top Listed Detinations</h2>
-          </div>
-        </div>
-        <div class="popular-destination-cards position-relative">
-          <div class="row g-lg-4 tablet-horizontal-scroll">
-            <div class="col-12 col-lg-4 col-xl-3">
-              <div class="popular-destination-card">
-                <div class="popular-destination-card__image">
-                  <img src="./assets/images/europe-image.jpg" alt="Europe Image" />
-                </div>
-                <div class="popular-destination-card__content">
-                  <h2 class="__heading"><a href="javascript:;">Europe</a></h2>
-                  <p class="__paragraph">+150 Tours</p>
-                  <ul class="cta-buttons">
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">All Adventures</a>
-                    </li>
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">Deals</a>
-                    </li>
+      <div class="package-details__tab" id="package-details-tab">
+        <div class="__container">
+          <div class="package-details__tab__container">
+            <div class="package-details__tab__header">
+              <ul class="tab-list">
+                <li class="tab-list__item active" id="tab-item-1">
+                  <i class="fa-solid fa-info-circle"></i>
+                  Description
+                </li>
+                <li class="tab-list__item" id="tab-item-2">
+                  <i class="fa-solid fa-map-marked-alt"></i>
+                  Location
+                </li>
+                <li class="tab-list__item" id="tab-item-3">
+                  <i class="fa-solid fa-images"></i>
+                  Gallery
+                </li>
+              </ul>
+            </div>
+            <div class="package-details__tab__body">
+              <div class="tab-data" id="tab-item-1-data">
+                <div class="__text">
+                  <h4>Discription</h4>
+                  <p>
+                    Sit amet consectetur velit integer tincidunt sceleries nodalesry volutpat neque fermentum malesuada sceleris quecy massa lacus ultrices eget leo cras odio blandit rhoncus eues feugiat. Sit amet consectetur velit integer tincidunt sceleries nodalesry.
+                  </p>
+                  <h5>Lorem Ipsum dolor sit amet</h5>
+                  <ul>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quas labore nulla dignissimos est recusandae!</li>
+                    <li>Lorem, adipisicing elit. Consequuntur quas labore nulla dignissimos est recusandae!</li>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem, ipsum dolor sit amet consectetur dignissimos est recusandae!</li>
+                    <li>Lorem, ipsum dolor sit adipisicing elit. nulla dignissimos est recusandae!</li>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. nulla dignissimos est recusandae!</li>
                   </ul>
                 </div>
               </div>
-            </div>
-            <div class="col-12 col-lg-4 col-xl-3">
-              <div class="popular-destination-card">
-                <div class="popular-destination-card__image">
-                  <img src="./assets/images/africa.jpg" alt="Europe Image" />
-                </div>
-                <div class="popular-destination-card__content">
-                  <h2 class="__heading"><a href="javascript:;">Africa</a></h2>
-                  <p class="__paragraph">+150 Tours</p>
-                  <ul class="cta-buttons">
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">All Adventures</a>
-                    </li>
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">Deals</a>
-                    </li>
-                  </ul>
+              <div class="tab-data" id="tab-item-2-data">
+                <div class="tab-g-map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.3540474877977!2d55.323862175998286!3d25.258672829206784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5cda8ebc79f7%3A0x673eacccd1941b6b!2sDeira%20Clocktower!5e0!3m2!1sen!2sae!4v1686580717106!5m2!1sen!2sae" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
               </div>
-            </div>
-            <div class="col-12 col-lg-4 col-xl-3">
-              <div class="popular-destination-card">
-                <div class="popular-destination-card__image">
-                  <img src="./assets/images/europe-image.jpg" alt="Europe Image" />
-                </div>
-                <div class="popular-destination-card__content">
-                  <h2 class="__heading"><a href="javascript:;">Europe</a></h2>
-                  <p class="__paragraph">+150 Tours</p>
-                  <ul class="cta-buttons">
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">All Adventures</a>
-                    </li>
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">Deals</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-4 col-xl-3">
-              <div class="popular-destination-card">
-                <div class="popular-destination-card__image">
-                  <img src="./assets/images/africa.jpg" alt="Europe Image" />
-                </div>
-                <div class="popular-destination-card__content">
-                  <h2 class="__heading"><a href="javascript:;">Africa</a></h2>
-                  <p class="__paragraph">+150 Tours</p>
-                  <ul class="cta-buttons">
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">All Adventures</a>
-                    </li>
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">Deals</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-4 col-xl-3">
-              <div class="popular-destination-card">
-                <div class="popular-destination-card__image">
-                  <img src="./assets/images/europe-image.jpg" alt="Europe Image" />
-                </div>
-                <div class="popular-destination-card__content">
-                  <h2 class="__heading"><a href="javascript:;">Europe</a></h2>
-                  <p class="__paragraph">+150 Tours</p>
-                  <ul class="cta-buttons">
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">All Adventures</a>
-                    </li>
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">Deals</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-4 col-xl-3">
-              <div class="popular-destination-card">
-                <div class="popular-destination-card__image">
-                  <img src="./assets/images/africa.jpg" alt="Europe Image" />
-                </div>
-                <div class="popular-destination-card__content">
-                  <h2 class="__heading"><a href="javascript:;">Africa</a></h2>
-                  <p class="__paragraph">+150 Tours</p>
-                  <ul class="cta-buttons">
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">All Adventures</a>
-                    </li>
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">Deals</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-4 col-xl-3">
-              <div class="popular-destination-card">
-                <div class="popular-destination-card__image">
-                  <img src="./assets/images/europe-image.jpg" alt="Europe Image" />
-                </div>
-                <div class="popular-destination-card__content">
-                  <h2 class="__heading"><a href="javascript:;">Europe</a></h2>
-                  <p class="__paragraph">+150 Tours</p>
-                  <ul class="cta-buttons">
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">All Adventures</a>
-                    </li>
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">Deals</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-4 col-xl-3">
-              <div class="popular-destination-card">
-                <div class="popular-destination-card__image">
-                  <img src="./assets/images/africa.jpg" alt="Europe Image" />
-                </div>
-                <div class="popular-destination-card__content">
-                  <h2 class="__heading"><a href="javascript:;">Africa</a></h2>
-                  <p class="__paragraph">+150 Tours</p>
-                  <ul class="cta-buttons">
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">All Adventures</a>
-                    </li>
-                    <li class="cta-buttons__item">
-                      <a href="javascript:;">Deals</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr class="my-5" />
-      </div>
-    </div>
-  </section>
-  
-  <section class="all-destination-sec">
-    <div class="container">
-      <div class="all-destination-sec__container">
-        <div class="section-heading">
-          <div class="section-heading__content --left">
-            <small class="heading-top-strip">
-              <img src="./assets/images/explore-icon.svg" alt="Explore Icon" />
-              Lorem Ipsum dolor sit amet...
-            </small>
-            <h2 class="__heading">Lorem Ipsum dolor sit amet</h2>
-          </div>
-        </div>
-
-        <div class="destinations-filter-block">
-          <div class="__icon"><i class="fa-solid fa-sliders"></i></div>
-          <input type="text" placeholder="what are you looking for..." id="" class="form-control" />
-          <div class="__icon"><i class="fa-solid fa-search"></i></div>
-        </div>
-
-        <div class="destinations-list-card__container">
-          <div class="destinations-list-card">
-            <div class="destinations-list-card__image">
-              <div class="__image">
-                <img src="./assets/images/europe-image.jpg" alt="Europe Image" />
-              </div>
-              <div class="__content">
-                <h2 class="__heading">Europe</h2>
-                <ul class="cta-buttons">
-                  <li class="cta-buttons__item">
-                    <a href="javascript:;">All Adventures</a>
+              <div class="tab-data selected" id="tab-item-3-data">
+                <ul class="tab-gallery">
+                  <li class="tab-gallery__item">
+                    <img src="./assets/images/gallery-1.png" alt="Image" />
                   </li>
-                  <li class="cta-buttons__item">
-                    <a href="javascript:;">Deals</a>
+                  <li class="tab-gallery__item">
+                    <img src="./assets/images/gallery-2.png" alt="Image" />
+                  </li>
+                  <li class="tab-gallery__item">
+                    <img src="./assets/images/gallery-3.png" alt="Image" />
+                  </li>
+                  <li class="tab-gallery__item">
+                    <img src="./assets/images/gallery-4.png" alt="Image" />
+                  </li>
+                  <li class="tab-gallery__item">
+                    <img src="./assets/images/gallery-5.png" alt="Image" />
+                  </li>
+                  <li class="tab-gallery__item">
+                    <img src="./assets/images/gallery-6.png" alt="Image" />
                   </li>
                 </ul>
               </div>
-            </div>
-            <div class="destinations-list-card__content">
-              <ul class="__list">
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Amalfi Coast</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Austria</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Croatia</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">France</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Greece</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Ireland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Italy</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Netherlands</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Norway</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Poland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Portugal</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Portugal & Spain</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Scotland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Scandinavia</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Sicily</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Spain</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Switzerland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Turkey</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Tuscany</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="destinations-list-card">
-            <div class="destinations-list-card__image">
-              <div class="__image">
-                <img src="./assets/images/europe-image.jpg" alt="Europe Image" />
-              </div>
-              <div class="__content">
-                <h2 class="__heading">Europe</h2>
-                <ul class="cta-buttons">
-                  <li class="cta-buttons__item">
-                    <a href="javascript:;">All Adventures</a>
-                  </li>
-                  <li class="cta-buttons__item">
-                    <a href="javascript:;">Deals</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="destinations-list-card__content">
-              <ul class="__list">
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Amalfi Coast</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Austria</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Croatia</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">France</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Greece</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Ireland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Italy</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Netherlands</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Norway</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Poland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Portugal</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Portugal & Spain</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Scotland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Scandinavia</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Sicily</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Spain</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Switzerland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Turkey</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Tuscany</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="destinations-list-card">
-            <div class="destinations-list-card__image">
-              <div class="__image">
-                <img src="./assets/images/europe-image.jpg" alt="Europe Image" />
-              </div>
-              <div class="__content">
-                <h2 class="__heading">Europe</h2>
-                <ul class="cta-buttons">
-                  <li class="cta-buttons__item">
-                    <a href="javascript:;">All Adventures</a>
-                  </li>
-                  <li class="cta-buttons__item">
-                    <a href="javascript:;">Deals</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="destinations-list-card__content">
-              <ul class="__list">
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Amalfi Coast</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Austria</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Croatia</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">France</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Greece</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Ireland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Italy</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Netherlands</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Norway</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Poland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Portugal</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Portugal & Spain</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Scotland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Scandinavia</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Sicily</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Spain</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Switzerland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Turkey</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Tuscany</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="destinations-list-card">
-            <div class="destinations-list-card__image">
-              <div class="__image">
-                <img src="./assets/images/europe-image.jpg" alt="Europe Image" />
-              </div>
-              <div class="__content">
-                <h2 class="__heading">Europe</h2>
-                <ul class="cta-buttons">
-                  <li class="cta-buttons__item">
-                    <a href="javascript:;">All Adventures</a>
-                  </li>
-                  <li class="cta-buttons__item">
-                    <a href="javascript:;">Deals</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="destinations-list-card__content">
-              <ul class="__list">
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Amalfi Coast</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Austria</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Croatia</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">France</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Greece</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Ireland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Italy</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Netherlands</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Norway</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Poland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Portugal</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Portugal & Spain</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Scotland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Scandinavia</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Sicily</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Spain</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Switzerland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Turkey</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Tuscany</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="destinations-list-card">
-            <div class="destinations-list-card__image">
-              <div class="__image">
-                <img src="./assets/images/europe-image.jpg" alt="Europe Image" />
-              </div>
-              <div class="__content">
-                <h2 class="__heading">Europe</h2>
-                <ul class="cta-buttons">
-                  <li class="cta-buttons__item">
-                    <a href="javascript:;">All Adventures</a>
-                  </li>
-                  <li class="cta-buttons__item">
-                    <a href="javascript:;">Deals</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="destinations-list-card__content">
-              <ul class="__list">
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Amalfi Coast</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Austria</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Croatia</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">France</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Greece</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Ireland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Italy</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Netherlands</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Norway</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Poland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Portugal</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Portugal & Spain</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Scotland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Scandinavia</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Sicily</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Spain</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Switzerland</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Turkey</a></li>
-                <li class="__list__item"><a href="javascript:;" class="__list__item--link">Tuscany</a></li>
-              </ul>
             </div>
           </div>
         </div>
@@ -676,33 +397,17 @@
     </div>
   </section>
   
-  <section class="special-block-sec">
-    <div class="special-block-sec__container" style="background-image: url('./assets/images/adventure-bg.png');">
-      <div class="special-block-sec__container__content">
-        <h2 class="__heading text-primary">Need Help booking your adventure</h2>
-        <p class="__paragraph">
-          Our team of experienced Travel Experts have ventured to hundreds of countries around the globe and have decades of first-hand travel experiences to share. Contact us now to have all of your tour-related questions answered!
-        </p>
-        <a href="/contact.html" class="btn btn-light btn-inline mt-4">
-          Contact Us
-          <i class="fa-solid fa-angle-right"></i>
-        </a>
-      </div>
-    </div>
-  </section>
 
   <section class="packages-sec">
     <div class="container">
-      <div class="section-heading">
+      <hr />
+      <div class="section-heading mb-3">
         <div class="section-heading__content --left">
           <small class="heading-top-strip">
             <img src="./assets/images/explore-icon.svg" alt="Explore Icon" />
             You must explore...
           </small>
-          <h2 class="__heading">Best suitable Packages for <br /> Your Vacation Plans</h2>
-        </div>
-        <div class="section-heading__content --right">
-          <p>Sit amet consectetur velit integer tincidunt sceleries nodalesry volutpat neque fermentum malesuada sceleris quecy massa lacus ultrices eget leo cras odio blandit rhoncus eues feugiat.</p>
+          <h2 class="__heading">Featured Packages</h2>
         </div>
       </div>
       <div class="packages-sec__container">
@@ -832,14 +537,27 @@
     </div>
   </section>
 
-  <section class="offer-sec mt-4">
+  <section class="special-block-sec">
+    <div class="special-block-sec__container" style="background-image: url('./assets/images/adventure-image-2.jpg');">
+      <div class="special-block-sec__container__content max-width--50">
+        <h2 class="__heading text-primary">Great opportunity for adventure and travels</h2>
+        <p class="__paragraph">Our team of experienced Travel Experts have ventured to hundreds of countries around the globe and have decades of first-hand travel experiences to share.</p>
+        <a href="/contact.html" class="btn btn-light btn-inline mt-4">
+          Tal to our expert
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="offer-sec">
     <div class="container">
-      <div class="offer-sec__container">
+      <div class="offer-sec__container mb-2">
         <div class="row align-items-center">
           <div class="col-12 col-md-10 mx-md-auto px-lg-2 col-lg-6 gx-lg-5">
             <div class="offer-sec__container__card">
               <a href="#">
-                <img src="./assets/images/ad-banner.png" alt="Ad Banner" />
+                <img src="./assets/images/ad-imgae-2.jpg" alt="Ad Banner" />
               </a>
             </div>
           </div>
