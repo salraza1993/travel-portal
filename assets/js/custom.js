@@ -138,32 +138,37 @@ const packageDetailsTabContainer = document?.querySelector('#package-details-tab
 const packageTabs = packageDetailsTabContainer?.querySelectorAll('.tab-list .tab-list__item');
 const packageTabData = packageDetailsTabContainer?.querySelectorAll('.tab-data');
 
-packageTabs.forEach(tab => {
-  tab.addEventListener('click', e => {
+packageTabs?.forEach(tab => {
+  tab?.addEventListener('click', e => {
     e.preventDefault();
-    packageTabs.forEach(tabItem => tabItem.classList.remove('active'));
-    packageTabData.forEach(tabItem => tabItem.classList.remove('selected'));
+    packageTabs?.forEach(tabItem => tabItem.classList.remove('active'));
+    packageTabData?.forEach(tabItem => tabItem.classList.remove('selected'));
     let this_item_id = e.target.id
-    let tab_data = packageDetailsTabContainer?.querySelector(`${this_item_id}-data`);
-    e.target.classList.add('active');
-    console.log(this_item_id)    
-    console.log(tab_data)    
-    
-
+    let tab_data = packageDetailsTabContainer?.querySelector(`#${this_item_id}-data`);
+    e.target?.classList.add('active');
+    tab_data?.classList.add('selected');
   });
 })
 
-// document?.addEventListener('DOMContentLoaded', function () {
-//   const departure = new Litepicker({
-//     element: document.getElementById('departure'),
-//     numberOfColumns: 2,
-//     numberOfMonths: 2,
-//     plugins: ['mobilefriendly']
-//   });
-//   const packageDeparture = new Litepicker({
-//     element: document.getElementById('packageDeparture'),
-//     numberOfColumns: 2,
-//     numberOfMonths: 2,
-//     plugins: ['mobilefriendly']
-//   });
-// });
+document?.addEventListener('DOMContentLoaded', function () {
+  try {
+    const departure = new Litepicker({
+      element: document.getElementById('departure'),
+      numberOfColumns: 2,
+      numberOfMonths: 2,
+      plugins: ['mobilefriendly']
+    });
+  } catch (error) {
+    console.error(error)
+  }
+  try {
+    const packageDeparture = new Litepicker({
+      element: document.getElementById('packageDeparture'),
+      numberOfColumns: 2,
+      numberOfMonths: 2,
+      plugins: ['mobilefriendly']
+    });
+  } catch (error) {
+    console.error(error)
+  }
+});

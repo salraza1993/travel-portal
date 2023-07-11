@@ -83,6 +83,17 @@
   &--80 { max-width: 80% !important; }
   &--90 { max-width: 90% !important; }
   &--100 { max-width: 100% !important; }
+  
+  &-mobile--10 { max-width: 10% !important; }
+  &-mobile--20 { max-width: 20% !important; }
+  &-mobile--30 { max-width: 30% !important; }
+  &-mobile--40 { max-width: 40% !important; }
+  &-mobile--50 { max-width: 50% !important; }
+  &-mobile--60 { max-width: 60% !important; }
+  &-mobile--70 { max-width: 70% !important; }
+  &-mobile--80 { max-width: 80% !important; }
+  &-mobile--90 { max-width: 90% !important; }
+  &-mobile--100 { max-width: 100% !important; }
 }
 
 @media (width <= $media-screen--mobile) {

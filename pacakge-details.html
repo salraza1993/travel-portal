@@ -144,7 +144,7 @@
                 <a class="main-header__navigation__menu__item__link" href="./contact.html">Contact</a>
               </li>
               <li class="main-header__navigation__menu__item">
-                <a class="main-header__navigation__menu__item__link" href="./sepecial-offers.html">Special Offers</a>
+                <a class="main-header__navigation__menu__item__link" href="./pacakges.html">Special Offers</a>
               </li>
             </ul>
           </nav>
@@ -234,19 +234,19 @@
           </div>
           <ul class="mobile-menu__nav">
             <li class="mobile-menu__nav__item">
-              <a class="mobile-menu__nav__item__link" href="#">Holiday Packages</a>
+              <a class="mobile-menu__nav__item__link" href="./pacakges.html">Holiday Packages</a>
             </li>
             <li class="mobile-menu__nav__item">
-              <a class="mobile-menu__nav__item__link" href="#">Destinations</a>
+              <a class="mobile-menu__nav__item__link" href="./destinations.html">Destinations</a>
             </li>
             <li class="mobile-menu__nav__item">
               <a class="mobile-menu__nav__item__link" href="#">Blog</a>
             </li>
             <li class="mobile-menu__nav__item">
-              <a class="mobile-menu__nav__item__link" href="#">Contact</a>
+              <a class="mobile-menu__nav__item__link" href="./contact.html">Contact</a>
             </li>
             <li class="mobile-menu__nav__item">
-              <a class="mobile-menu__nav__item__link" href="#">Special Offers</a>
+              <a class="mobile-menu__nav__item__link" href="./pacakges.html">Special Offers</a>
             </li>
           </ul>
         </div>
@@ -270,7 +270,9 @@
     <div class="container">
       <div class="package-details-sec__container">
         <div class="__banner">
-          <img src="./assets/images/package-details-banner.jpg" alt="Package Details Banner" />
+          <div class="__banner__image">
+            <img src="./assets/images/package-details-banner.jpg" alt="Package Details Banner" />
+          </div>
           <div class="__title">Explore South Africa</div>
         </div>
         <div class="__header"></div>
@@ -331,7 +333,7 @@
           <div class="package-details__tab__container">
             <div class="package-details__tab__header">
               <ul class="tab-list">
-                <li class="tab-list__item active" id="tab-item-1">
+                <li class="tab-list__item" id="tab-item-1">
                   <i class="fa-solid fa-info-circle"></i>
                   Description
                 </li>
@@ -339,7 +341,7 @@
                   <i class="fa-solid fa-map-marked-alt"></i>
                   Location
                 </li>
-                <li class="tab-list__item" id="tab-item-3">
+                <li class="tab-list__item active" id="tab-item-3">
                   <i class="fa-solid fa-images"></i>
                   Gallery
                 </li>
@@ -394,9 +396,134 @@
           </div>
         </div>
       </div>
+      <div class="package-details__form">
+        <div class="package-details__form__container">
+          <div class="__form">
+            <div class="section-heading m-0">
+              <div class="section-heading__content --left">
+                <h2 class="__heading">Book The Package</h2>
+              </div>
+            </div>
+            <form>
+              <div class="row">
+                <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="form-group">
+                    <label for="userName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="userName" placeholder="Enter Name" />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Email" />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-6">
+                  <div class="form-group">
+                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phoneNumber" placeholder="Enter Phone Number" />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                  <div class="form-group">
+                    <label for="travelDate" class="form-label">Travel Date</label>
+                    <input type="date" class="form-control" id="travelDate" />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                  <div class="form-group">
+                    <label for="duration" class="form-label">Duration</label>
+                    <input type="text" class="form-control" id="duration" placeholder="Enter Duration" />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                  <div class="form-group">
+                    <label for="duration" class="form-label">Adult(s)</label>
+                    <input type="text" class="form-control" id="duration" value="01" />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                  <div class="form-group">
+                    <label for="duration" class="form-label">Child(s)</label>
+                    <input type="text" class="form-control" id="duration" value="01" />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                  <div class="form-group">
+                    <label for="duration" class="form-label">Infant(s)</label>
+                    <input type="text" class="form-control" id="duration" value="01" />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="form-group">
+                    <label for="travelDate" class="form-label">Nationality</label>
+                    <select class="form-select">
+                      <option selected>-- Select --</option>
+                      <option value="1">Country - 1</option>
+                      <option value="2">Country - 2</option>
+                      <option value="3">Country - 3</option>
+                      <option value="3">Country - 4</option>
+                      <option value="3">Country - 5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="form-group">
+                    <label for="travelDate" class="form-label">Residence</label>
+                    <select class="form-select">
+                      <option selected>-- Select --</option>
+                      <option value="1">Country - 1</option>
+                      <option value="2">Country - 2</option>
+                      <option value="3">Country - 3</option>
+                      <option value="3">Country - 4</option>
+                      <option value="3">Country - 5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <div class="col-12">
+                    <div class="form-group mb-3">
+                      <label for="travelDate" class="form-label">Hotel Category</label>
+                      <select class="form-select">
+                        <option selected>-- Select --</option>
+                        <option value="1">Category - 1</option>
+                        <option value="2">Category - 2</option>
+                        <option value="3">Category - 3</option>
+                        <option value="3">Category - 4</option>
+                        <option value="3">Category - 5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="travelDate" class="form-label">Class of Travel</label>
+                      <select class="form-select">
+                        <option selected>-- Select --</option>
+                        <option value="1">Class of Travel - 1</option>
+                        <option value="2">Class of Travel - 2</option>
+                        <option value="3">Class of Travel - 3</option>
+                        <option value="3">Class of Travel - 4</option>
+                        <option value="3">Class of Travel - 5</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <div class="form-group">
+                    <label for="message" class="form-label">Residence</label>
+                    <textarea class="form-control __textarea" id="message" rows="4"></textarea>
+                  </div>
+                </div>                
+              </div>
+              <button class="submit-button" type="button">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
-  
+  </section>  
 
   <section class="packages-sec">
     <div class="container">
@@ -539,7 +666,7 @@
 
   <section class="special-block-sec">
     <div class="special-block-sec__container" style="background-image: url('./assets/images/adventure-image-2.jpg');">
-      <div class="special-block-sec__container__content max-width--50">
+      <div class="special-block-sec__container__content max-width--50 max-width-mobile--100">
         <h2 class="__heading text-primary">Great opportunity for adventure and travels</h2>
         <p class="__paragraph">Our team of experienced Travel Experts have ventured to hundreds of countries around the globe and have decades of first-hand travel experiences to share.</p>
         <a href="/contact.html" class="btn btn-light btn-inline mt-4">
@@ -563,7 +690,7 @@
           </div>
           <div class="col-12 col-lg-6">
             <div class="offer-sec__container__content justify-content-center">
-              <div class="subscribe-container w-100 max-width--80">
+              <div class="subscribe-container w-100 max-width--80 max-width-mobile--100">
                 <h2 class="text-secondary my-2 fw-bold font-playfair--700 fs-1">Never Miss a Deal!</h2>
                 <p class="font-size--small">Subscribe our newsletter to get our latest updates &amp; News</p>
                 <div class="subscribe-container__form">
