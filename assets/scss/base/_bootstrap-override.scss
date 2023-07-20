@@ -182,6 +182,16 @@
     --bs-btn-hover-border-color: var(--base-primary);
     --bs-btn-hover-bg: var(--base-primary);
   }
+  
+  &--gray, &-gray {
+    --bs-btn-color: var(--bs-dark);
+    --bs-btn-bg: var(--bs-gray-300);
+    --bs-btn-border-color: var(--bs-gray-300);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-border-color: var(--bs-dark);
+    --bs-btn-hover-bg: var(--bs-dark);
+  }
+
   // &-outline {
   //   &-primary {
   //     --bs-btn-color: var(--bs-primary);

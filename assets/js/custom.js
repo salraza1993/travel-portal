@@ -55,6 +55,16 @@ $(document).ready(function () {
     prevArrow: $('.slider-arrows__button--left'),
     nextArrow: $('.slider-arrows__button--right'),
   });
+  $('.testimonial-slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplaySpeed: 3500,
+    autoplay: true,
+    arrows: false,
+    dots: true,
+    adaptiveHeight: true
+  });
 
   $('.top-deals-cards-slider').slick({
     infinite: true,

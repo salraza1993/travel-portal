@@ -40,6 +40,9 @@
   &--primary { background-color: var(--bs-primary) !important; }
   &--secondary { background-color: var(--bs-secondary) !important; }
 }
+.text--balance, .text-balance {
+  text-wrap: balance;
+}
 .bg, .text {
   &--primary, &-primary { color: var(--bs-primary) !important; }
   &--secondary { color: var(--bs-secondary) !important; }

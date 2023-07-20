@@ -45,6 +45,7 @@ $media-screen--xxl-container: 1320px;
   --remain-viewport-side-width: 100vw;
   --bs-gutter-x: 1.5rem;
   --mobile-padding-x: calc(var(--bs-gutter-x) * .5);
+  --elems-border-radius: calc(var(--base-border-radius) * 2);
   
   --font-size-small: 0.9rem;
   --font-inter: 'Inter', sans-serif;
